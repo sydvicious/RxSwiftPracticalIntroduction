@@ -26,6 +26,7 @@
 		52C3DBAE2004DF1400ACE4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C3DBB02004DF1400ACE4E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C3DBB62004DFB400ACE4E4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6227F0D9248480100090A081 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		6C365836B1C49C8F4ECB2C45 /* Pods_RxViewControllerCommunication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxViewControllerCommunication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC88A2D6C1A7FCA48347095 /* Pods-RxViewControllerCommunication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxViewControllerCommunication.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxViewControllerCommunication/Pods-RxViewControllerCommunication.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +55,7 @@
 		52C3DB982004DF1400ACE4E4 = {
 			isa = PBXGroup;
 			children = (
+				6227F0D9248480100090A081 /* Podfile */,
 				52C3DBA32004DF1400ACE4E4 /* RxViewControllerCommunication */,
 				52C3DBA22004DF1400ACE4E4 /* Products */,
 				40704E35148CA4611AE73564 /* Pods */,
@@ -103,7 +105,6 @@
 				52C3DB9E2004DF1400ACE4E4 /* Frameworks */,
 				52C3DB9F2004DF1400ACE4E4 /* Resources */,
 				96C75F5A7D263B39FB1BD960 /* [CP] Embed Pods Frameworks */,
-				9D0DB4116ED4188CBC7D02D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,31 +187,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RxViewControllerCommunication/Pods-RxViewControllerCommunication-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RxViewControllerCommunication/Pods-RxViewControllerCommunication-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxViewControllerCommunication/Pods-RxViewControllerCommunication-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D0DB4116ED4188CBC7D02D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxViewControllerCommunication/Pods-RxViewControllerCommunication-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxViewControllerCommunication/Pods-RxViewControllerCommunication-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
